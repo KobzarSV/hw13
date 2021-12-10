@@ -83,7 +83,7 @@ public class HttpUtil {
 
     public static void createdJsonFile(int userId) throws IOException, InterruptedException {
         Post lastPostUser = lastComentPostUser(userId);
-        String fileGson = "src\\main\\resources\\user-" + userId + "-post-" + lastPostUser.getId() + "-comments.json";
+        String fileGson = "src/main/resources/user-" + userId + "-post-" + lastPostUser.getId() + "-comments.json";
         File file = new File(fileGson);
         checkIfFileAvailable(file);
         writeFilJson(fileGson, lastPostUser);
